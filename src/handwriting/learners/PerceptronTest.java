@@ -1,3 +1,5 @@
+package handwriting.learners;
+
 import static org.junit.Assert.*;
 
 import handwriting.learners.MultiLayer;
@@ -6,10 +8,9 @@ import handwriting.learners.PerceptronNet;
 import org.junit.Test;
 
 public class PerceptronTest {
-	private double[][] inputs = {{1, 1}};
-	//, {1, 0}};, {0, 1}, {0, 0}};
-	private double[][] andTargets = {{1}, {0}};
-//		, {0}, {0}};
+	private double[][] inputs = {{1, 1}, {1, 0}, {0, 1}, {0, 0}};
+
+	private double[][] andTargets = {{1}, {0}, {0}, {0}};
 	private double[][] orTargets = {{1}, {1}, {1}, {0}};
 	private double[][] xorTargets = {{0}, {1}, {1}, {0}};
 	

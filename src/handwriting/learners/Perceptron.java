@@ -86,12 +86,13 @@ public class Perceptron extends PerceptronNet {
     public double[] compute(double[] inputs) {
         checkCompute(inputs);
         /* TODO: Write code to store the result in "outputs" */
-        // i = outputnode ; j = inputnode //
+
 
         for ( int i = 0; i < numOutputNodes(); i++){
             for ( int j = 0; j<inputs.length; j++){
                 outputs[i] += weight(j,i)* inputs[j];
             }
+            outputs[i] += weight(threshold(),i);
             outputs[i] = sigmoid(outputs[i]);
         }
 
